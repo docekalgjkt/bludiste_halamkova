@@ -1,6 +1,6 @@
 from TXT_Format import TXT_Format
 from CSV_Format import CSV_Format
-
+#
 class Factory:
     def __init__(self, nacitane_bludiste, format, seznam):
         self.nacitane_bludiste = nacitane_bludiste

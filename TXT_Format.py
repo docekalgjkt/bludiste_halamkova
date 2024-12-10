@@ -1,4 +1,5 @@
 import csv
+#
 class TXT_Format:
     def __init__(self, nacitane_bludiste):
         self.nacitane_bludiste = nacitane_bludiste

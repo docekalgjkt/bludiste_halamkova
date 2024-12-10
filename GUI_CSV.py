@@ -1,6 +1,6 @@
 from tkinter import Tk, Canvas
 import csv
-
+#
 with open('maze_medium.csv', 'r') as file:
     reader = csv.reader(file)
     content = list(reader)

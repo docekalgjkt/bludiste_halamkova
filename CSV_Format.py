@@ -1,5 +1,6 @@
 import csv
 class CSV_Format:
+    #
     def __init__(self, nacitane_bludiste):
         self.nacitane_bludiste = nacitane_bludiste
     def nacist_soubor(self):

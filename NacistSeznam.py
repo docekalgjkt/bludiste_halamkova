@@ -1,5 +1,5 @@
 from Factory import Factory
-
+#
 class NacistSeznam:
     def __init__(self, nacitane_bludiste, bludiste):
         self.nacitane_bludiste = nacitane_bludiste
