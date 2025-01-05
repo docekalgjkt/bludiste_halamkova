@@ -1,8 +1,8 @@
 from tkinter import *
 from random import randint
-
+#
 cell_size = 20 #pixels
-ms = 30 # rows and columns = maze size
+ms = 50 # rows and columns = maze size
 visited_cells = []
 walls = []
 
