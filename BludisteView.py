@@ -1,5 +1,4 @@
 from tkinter import Tk, Canvas
-import time
 
 class BludisteView:
     def __init__(self, seznam):
