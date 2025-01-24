@@ -1,30 +1,13 @@
-from TXT_Format import TXT_Format
-from CSV_Format import CSV_Format
-#
+from TXT_Format import *
+from CSV_Format import *
+from NacistSeznam import *
+
 class Factory:
-    def __init__(self, nacitane_bludiste, format, seznam):
+    def __init__(self, nacitane_bludiste, file_format):
         self.nacitane_bludiste = nacitane_bludiste
-        self.format = None
-        self.seznam = None
-    def poznej_format(self):
-        #tato metoda rozpozna, zda je nacitany soubor txt nebo csv, a na zaklade toho pak vola vhodny kod
-        if str(self.nacitane_bludiste)[-4:] == ".txt":
-            self.format = "txt"
-            return self.format
-        elif str(self.nacitane_bludiste)[-4:] == ".csv":
-            self.format = "csv"
-            return self.format
-        else:
-            pass
+        if file_format == "txt":
+            self.helper = TXT_Format() 
+        if file_format == "csv":
+            self.helper = CSV_Format()
     def objekt_nacitajici_soubor(self):
-        if self.format == "txt":
-            self.format = TXT_Format(self.nacitane_bludiste)
-            self.format.nacist_soubor() = self.seznam
-            return self.seznam
-        elif self.format == "csv":
-            self.format = CSV_Format(self.nacitane_bludiste)
-            self.format.nacist_soubor() = self.seznam
-            return self.seznam
-        #tady je kod schopny podle potreby prevzit informace od tridy TXT_Format nebo CSV_Format (podle toho, jakej format metoda poznej_format() identifikuje)
-
-
+        return self.helper.kod(self.nacitane_bludiste)
